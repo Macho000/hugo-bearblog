@@ -1,7 +1,10 @@
-<a href="{{ "/" | relURL }}">Home</a>
+<a href="{{ "./" | relURL }}">Home</a>
 {{ range .Site.Menus.main }}
 <a href="{{ .URL }}">{{ .Name }}</a>
 {{ end }}
-{{ with .Site.GetPage "/blog" }}
-<a href="{{ "/blog" | relURL }}">Blog</a>
+{{ with .Site.GetPage "/blogs" }}
+<a href="{{ "./blogs" | relURL }}">Blogs</a>
+{{ end }}
+{{ with .Site.GetPage "/research_blog" }}
+<a href="{{ "./research_blog" | relURL }}">Research Blogs</a>
 {{ end }}
